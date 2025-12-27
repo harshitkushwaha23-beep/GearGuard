@@ -4,7 +4,7 @@ import { protectedRoute, isManager } from "../middleware/protected.middleware.js
 
 const router = express.Router();
 
-router.post("/", protectedRoute, isManager, createEquipment);
+router.post("/", protectedRoute, createEquipment); // Allow all authenticated users to add equipment
 router.get("/", protectedRoute, getEquipment);
 router.patch("/:id/scrap", protectedRoute, isManager, scrapEquipment);
 

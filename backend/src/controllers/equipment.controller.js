@@ -24,10 +24,10 @@ export const getEquipment = async (_, res) => {
         // Requirement: Smart Button/Badge logic - show count of open requests 
         const result = await pool.query(`
             SELECT e.*, 
-            (SELECT COUNT(*) FROM maintenance_requests mr 
-             WHERE mr.equipment_id = e.id AND mr.status IN ('new', 'in_progress')) as open_requests_count
+            (SELECT COUNT(*) FROM requests r 
+             WHERE r.equipment_id = e.id AND r.status IN ('new', 'in_progress')) as open_requests_count
             FROM equipment e 
-            WHERE e.is_scrapped = FALSE
+            WHERE e.status = 'active'
             ORDER BY e.id ASC
         `);
         res.json(result.rows);

@@ -12,3 +12,74 @@
     --color-oxidized-iron: #ae2012ff;
     --color-brown-red: #9b2226ff;
 }
+
+/* Custom Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #005f73;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0a9396;
+}
+
+/* Global Styles */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #005f73 #f1f5f9;
+}
+
+/* Calendar Custom Styles */
+.react-calendar {
+    border: none !important;
+    font-family: inherit !important;
+}
+
+.react-calendar__tile--active {
+    background: #005f73 !important;
+    color: white !important;
+    border-radius: 8px !important;
+}
+
+.react-calendar__tile--now {
+    background: #e0f2fe !important;
+    border-radius: 8px !important;
+}
+
+.react-calendar__tile:hover {
+    background: #f1f5f9 !important;
+    border-radius: 8px !important;
+}
+
+/* Loading Animation */
+.loading-skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}

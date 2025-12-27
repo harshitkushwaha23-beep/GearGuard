@@ -87,9 +87,10 @@ export const updateStatus = async (req, res) => {
 export const getRequests = async (_, res) => {
     try {
         const result = await pool.query(`
-            SELECT mr.*, eq.name AS equipment_name, eq.category, u.name AS requester, tech.name AS technician
+            SELECT mr.*, eq.name AS equipment_name, eq.category, t.name as team_name, u.name AS requester, tech.name AS technician
             FROM maintenance_requests mr
             LEFT JOIN equipment eq ON mr.equipment_id = eq.id
+            LEFT JOIN teams t ON eq.team_id = t.id
             LEFT JOIN users u ON mr.requested_by = u.id
             LEFT JOIN users tech ON mr.assigned_to = tech.id
             ORDER BY mr.id ASC;
