@@ -110,7 +110,7 @@ export const forgotPassword = async (req, res) => {
     });
 
     await transporter.sendMail({
-        from: `"Gear Guard" <${process.env.EMAIL}>`,
+        from: `"Stock Master" <${process.env.EMAIL}>`,
         to: email,
         subject: "Your Password Reset OTP",
         html: Reset_Email_Template(code, logo, user.rows[0].name),
@@ -197,7 +197,7 @@ export const resetPassword = async (req, res) => {
         });
 
         await transporter.sendMail({
-            from: `"Gear Guard" <${process.env.EMAIL}>`,
+            from: `"Stock Master" <${process.env.EMAIL}>`,
             to: email,
             subject: "Your Password Has Been Reset",
             html: Password_Reset_Notification(logo, user.rows[0].name),
@@ -243,7 +243,7 @@ export const resetPasswordWithLogin = async (req, res) => {
         });
 
         await transporter.sendMail({
-            from: `"Gear Guard" <${process.env.EMAIL}>`,
+            from: `"Stock Master" <${process.env.EMAIL}>`,
             to: email,
             subject: "Your Password Has Been Reset",
             html: Password_Reset_Notification(logo, req.user.name),

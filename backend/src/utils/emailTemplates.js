@@ -110,11 +110,11 @@ export const Reset_Email_Template = (otpCode, logoUrl, userName) => `
                 <div class="logo-container">
                     <img
                         src="${logoUrl}"
-                        alt="GearGuard Logo"
+                        alt="StockMaster Logo"
                         class="logo"
                     />
-                    <span class="logotext-1">Gear</span>
-                    <span class="logotext-2">Guard</span>
+                    <span class="logotext-1">Stock</span>
+                    <span class="logotext-2">Master</span>
                 </div>
 
                <!-- <div class="header">
@@ -123,7 +123,7 @@ export const Reset_Email_Template = (otpCode, logoUrl, userName) => `
 
                 <div class="content">
                     <p>${userName},</p>
-                    <p>We received a request to reset the password for your GearGuard account.</p>
+                    <p>We received a request to reset the password for your StockMaster account.</p>
                     <p>Please use the one time verification code below to proceed:</p>
                 </div>
 
@@ -138,7 +138,7 @@ export const Reset_Email_Template = (otpCode, logoUrl, userName) => `
                 </div> -->
 
                 <div class="footer">
-                    <p>&copy; ${new Date().getFullYear()} GearGuard. All rights reserved.</p>
+                    <p>&copy; ${new Date().getFullYear()} StockMaster. All rights reserved.</p>
                     <p>
                         Need help?
                         <a
@@ -250,15 +250,15 @@ export const Password_Reset_Notification = (logoUrl, userName) => `
                         src="${logoUrl}"
                         class="logo"
                     />
-                    <span class="logotext-1">Gear</span>
-                    <span class="logotext-2">Guard</span>
+                    <span class="logotext-1">Stock</span>
+                    <span class="logotext-2">Master</span>
                 </div>
 
                 <div class="content">
                     <p>${userName},</p>
                     <p>
                         This is a confirmation that the password for your
-                        <strong>GearGuard</strong> account has been successfully reset.
+                        <strong>StockMaster</strong> account has been successfully reset.
                     </p>
                 </div>
 
@@ -272,7 +272,7 @@ export const Password_Reset_Notification = (logoUrl, userName) => `
                 </div>
 
                 <div class="footer">
-                    <p>&copy; ${new Date().getFullYear()} GearGuard. All rights reserved.</p>
+                    <p>&copy; ${new Date().getFullYear()} StockMaster. All rights reserved.</p>
                     <p>
                         Need help?
                         <a
